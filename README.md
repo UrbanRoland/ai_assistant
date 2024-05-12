@@ -10,3 +10,4 @@ The project is built with Gradle and Spring Boot, and it uses a PostgreSQL datab
 - **Interactive Shell**: The application provides an interactive shell for user input, making it easy to interact with the AI model.
 - **PostgreSQL Database**: The application uses a PostgreSQL database for storing data, providing robust and reliable data storage capabilities.
 - **Vector Storage**: The application uses the PGVector library for vector storage, configured with HNSW index type and cosine distance.
+- **RAG (Retrieval-Augmented Generation)**: The application uses the RAG model for combining the benefits of retrieval-based and generative pre-training for natural language understanding and generation.
