@@ -1,8 +1,13 @@
 package com.ai_assistant.commands;
 
 import org.springframework.ai.chat.ChatClient;
+import org.springframework.ai.chat.ChatResponse;
+import org.springframework.ai.chat.messages.SystemMessage;
+import org.springframework.ai.chat.messages.UserMessage;
+import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.chat.prompt.PromptTemplate;
 import org.springframework.ai.document.Document;
+import org.springframework.ai.openai.OpenAiChatOptions;
 import org.springframework.ai.vectorstore.SearchRequest;
 import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.beans.factory.annotation.Value;
@@ -39,6 +44,18 @@ public class SpringAssistantCommand {
             .getOutput()
             .getContent();
     }
+    
+    @Command(command = "weather", description = "Get the current weather conditions for the given city.")
+    public String cities(String message) {
+        SystemMessage systemMessage = new SystemMessage("You are a helpful AI Assistant answering questions about cities around the world.");
+        UserMessage userMessage = new UserMessage(message);
+        OpenAiChatOptions chatOptions = OpenAiChatOptions.builder()
+            .withFunction("currentWeatherFunction")
+            .build();
+        ChatResponse response = chatClient.call(new Prompt(List.of(systemMessage,userMessage), chatOptions));
+        return response.getResult().getOutput().getContent();
+    }
+    
     
     private List<String> findSimilarDocuments(String message) {
         List<Document> similarDocuments = vectorStore.similaritySearch(SearchRequest.query(message).withTopK(3));
