@@ -11,3 +11,4 @@ The project is built with Gradle and Spring Boot, and it uses a PostgreSQL datab
 - **PostgreSQL Database**: The application uses a PostgreSQL database for storing data, providing robust and reliable data storage capabilities.
 - **Vector Storage**: The application uses the PGVector library for vector storage, configured with HNSW index type and cosine distance.
 - **RAG (Retrieval-Augmented Generation)**: The application uses the RAG model for combining the benefits of retrieval-based and generative pre-training for natural language understanding and generation.
+- **Weather API Function Call**: The application has a feature to fetch and display weather information by making API calls to a Weather service.
