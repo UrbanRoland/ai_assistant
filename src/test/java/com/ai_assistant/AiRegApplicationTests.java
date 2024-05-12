@@ -1,4 +1,4 @@
-package com.example.aiREG;
+package com.ai_assistant;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.aiREG.setup;
+package com.ai_assistant.setup;
 
 import jakarta.annotation.PostConstruct;
 import org.slf4j.LoggerFactory;

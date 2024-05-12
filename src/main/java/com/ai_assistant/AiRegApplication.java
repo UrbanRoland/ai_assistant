@@ -1,6 +1,6 @@
-package com.example.aiREG;
+package com.ai_assistant;
 
-import com.example.aiREG.config.HintsRegistrar;
+import com.ai_assistant.config.HintsRegistrar;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;

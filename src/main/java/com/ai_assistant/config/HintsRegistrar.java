@@ -1,4 +1,4 @@
-package com.example.aiREG.config;
+package com.ai_assistant.config;
 
 import org.springframework.aot.hint.RuntimeHints;
 import org.springframework.aot.hint.RuntimeHintsRegistrar;

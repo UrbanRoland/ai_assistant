@@ -1,4 +1,4 @@
-package com.example.aiREG.commands;
+package com.ai_assistant.commands;
 
 import org.springframework.ai.chat.ChatClient;
 import org.springframework.ai.chat.prompt.PromptTemplate;
